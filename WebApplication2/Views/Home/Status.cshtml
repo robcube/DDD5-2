@@ -40,7 +40,7 @@
                     // Clear text box and reset focus for next comment.
                     $('#message').val('').focus();
                 });
-                var oldChat;
+
                 // pull from db
                 $.getJSON('@Url.Action("GetStatus")', null, function (data) {
                     $.each(data, function (i, item) {
@@ -48,8 +48,6 @@
                     + '</strong>: ' + htmlEncode(item.Status) + '</li>');
                     });
                 });
-
-                alert(oldChat);
             });
         });
         // This optional function html-encodes messages for display in the page.

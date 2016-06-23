@@ -37,8 +37,10 @@ namespace ConsoleApplication2
             l.EnlistMessageProcessor = false;  //Don't call the message processor in the context of the RECEIVE transaction
             l.MessageProcessor = InboundMessageProcessor.ProcessMessage;  //Wire up the message processors
             l.FailedMessageProcessor = InboundMessageProcessor.SaveFailedMessage;
-            l.ConnectionString = "Data Source=.;Initial Catalog=DDD5-1;Integrated Security=true";
+            l.ConnectionString = "Data Source=.;Initial Catalog=DDD5-2;Integrated Security=true";
             QueueSettings.Add(l);
+
+            Thread.Sleep(10000); // give it time for website to run
 
             foreach (var q in QueueSettings)
             {

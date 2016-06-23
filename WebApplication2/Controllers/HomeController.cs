@@ -18,8 +18,8 @@ namespace WebApplication2.Controllers
 
         public ActionResult Status()
         {
-            var context = GlobalHost.ConnectionManager.GetHubContext<Hubs.StatusHub>();
-            context.Clients.All.addNewMessageToPage("Admin", "stop the chat");
+            //var context = GlobalHost.ConnectionManager.GetHubContext<Hubs.StatusHub>();
+            //context.Clients.All.addNewMessageToPage("Admin", "stop the chat");
             return View();
         }
 
